@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "1b1010b4-c0ed-4d6f-9055-d890abff2455",
+		"name": "Tast Rest Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/createuser/shivamn",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"createuser",
+						"shivamn"
+					]
+				},
+				"description": "It will create new user for specified username in database if not in database."
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/getuser/shivamn",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getuser",
+						"shivamn"
+					]
+				},
+				"description": "Get User Details will return Username and Last Id of news"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all news ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/getallnewsdb",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getallnewsdb"
+					]
+				},
+				"description": "Get all news will return all news from database in json format."
+			},
+			"response": []
+		},
+		{
+			"name": "Get news by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/getnews/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getnews",
+						"1"
+					]
+				},
+				"description": "Will return News for specific id from database in JSON fromat"
+			},
+			"response": []
+		},
+		{
+			"name": "Get news by user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/getnewsbyuser/shivamn",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getnewsbyuser",
+						"shivamn"
+					]
+				},
+				"description": "Will return the next news in json format from database for user"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload json file ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/Dell/OneDrive/Documents/sample.json"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/uploadjson",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"uploadjson"
+					]
+				},
+				"description": "Upload json file of news into the database and will extract title of source url and all <p> tags"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
